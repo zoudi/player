@@ -1,0 +1,15 @@
+platform :ios, '8.0'
+target 'Project' do
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'AVOSCloud'
+pod 'BmobSDK'
+pod 'FMDB'
+pod 'PSTAlertController'
+pod 'FSTextView'
+#pod 'JPush'
+#pod 'RongCloudIM/IMKit'
+#pod 'mob_smssdk'
+pod 'IQKeyboardManager'
+end
+
