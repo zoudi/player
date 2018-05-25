@@ -7,9 +7,8 @@
 //
 
 #import "YGPlayerView.h"
-#import <AVFoundation/AVFoundation.h>
 #import "YGPlayInfo.h"
-#import "YGVideoTool.h"
+//#import "YGVideoTool.h"
 #import "NSString+Time.h"
 #import "YGBrightnessAndVolumeView.h"
 #import "YGLoadingView.h"
@@ -126,8 +125,6 @@ static id _instance;
 #import "MJExtension.h"
 
 @interface YGPlayerView () <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) NSMutableArray *playInfos;
-@property (nonatomic, strong) AVPlayer *player;
 @property (nonatomic, strong) AVPlayerItem *playerItem;
 @property (nonatomic, strong) AVURLAsset *asset;
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
@@ -146,7 +143,6 @@ static id _instance;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *moreBtn;
-@property (nonatomic, assign, getter=isLandscape) BOOL landscape;
 @property (nonatomic, assign, getter=controlPanelIsShowing) BOOL controlPanelShow;
 @property (nonatomic, weak) UIView *cover;
 @property (nonatomic, weak) UIButton *episodeCover;
@@ -169,7 +165,7 @@ static id _instance;
 - (NSMutableArray *)playInfos
 {
     if (_playInfos == nil) {
-        _playInfos = [YGPlayInfo mj_objectArrayWithFilename:@"playList.plist"];
+        _playInfos = [NSMutableArray array];//[YGPlayInfo mj_objectArrayWithFilename:@"playList.plist"];
     }
     return _playInfos;
 }

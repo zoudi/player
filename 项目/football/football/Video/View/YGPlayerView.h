@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 @class YGPlayInfo;
 
 @interface YGPlayerView : UIView
+@property (nonatomic, strong) AVPlayer *player;
+@property (nonatomic, strong) NSMutableArray *playInfos;
+@property (nonatomic, assign, getter=isLandscape) BOOL landscape;
 - (void)playWithPlayInfo:(YGPlayInfo *)playInfo;
+- (void)setForceDeviceOrientation:(UIDeviceOrientation)deviceOrientation;
 @end

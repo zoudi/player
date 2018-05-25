@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "IQKeyboardManager.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "WebViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +19,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [AVOSCloud setApplicationId:@"4M63gU82yYNQTPoTfuy1QrpP-gzGzoHsz" clientKey:@"K807wIChVVoS5AnjNxKAbmSi"];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+ 
+    AVQuery *query = [AVQuery queryWithClassName:@"WebURL"];
+    [query getObjectInBackgroundWithId:@"5b07b367a22b9d0032495b8c" block:^(AVObject *object, NSError *error) {
+        if (!error){
+            if (object != nil && object != NULL && [object objectForKey:@"AppURL"]) {
+                NSString *urlSrt = [object objectForKey:@"AppURL"];
+                if ([urlSrt hasPrefix:@"http://"]||[urlSrt hasPrefix:@"https://"]) {
+                    NSURL *url = [NSURL URLWithString:urlSrt];
+                    WebViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WebViewController"];
+                    VC.url = url;
+                    self.window.rootViewController = VC;
+                }
+            }
+        }
+        
+    }];
+    
+    
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     // Override point for customization after application launch.
     return YES;
 }

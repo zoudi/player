@@ -8,10 +8,10 @@
 
 #import "ZDMoviePlayerController.h"
 #import "YGPlayerView.h"
-#import "YGVideoTool.h"
-#import "YGPlayInfo.h"
+//#import "YGVideoTool.h"
+#import "CourseModel.h"
+
 @interface ZDMoviePlayerController ()
-@property (nonatomic, strong) NSMutableArray *playInfos;
 @property (weak, nonatomic) IBOutlet YGPlayerView *playerView;
 
 @end
@@ -28,17 +28,10 @@
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
-- (NSMutableArray *)playInfos
-{
-    if (_playInfos == nil) {
-        _playInfos = [YGVideoTool playInfos];
-    }
-    return _playInfos;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
     [self setupPlayerView];
 }
 
@@ -51,13 +44,26 @@
 // 初始化播放器View
 - (void)setupPlayerView
 {
-//    YGPlayerView *playerView = [[[NSBundle mainBundle] loadNibNamed:@"YGPlayerView" owner:nil options:nil] lastObject];
-//    [self.view addSubview:playerView];
-    YGPlayInfo *playInfo = [self.playInfos firstObject];
+    YGPlayInfo *playInfo = [self.dataArray objectAtIndex:self.index];
     [self.playerView playWithPlayInfo:playInfo];
+    [self.playerView setPlayInfos:self.dataArray];
 }
 
+- (IBAction)backAction:(id)sender {
+    if (self.playerView.isLandscape) { // 转至竖屏
+        [self.playerView setForceDeviceOrientation:UIDeviceOrientationPortrait];
+    }else{
+        [self.playerView.player pause];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
 
+-(NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 /*
 #pragma mark - Navigation

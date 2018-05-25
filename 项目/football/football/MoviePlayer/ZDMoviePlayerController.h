@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZDMoviePlayerController : UIViewController
+@property (nonatomic, strong)NSMutableArray *dataArray;
+@property (nonatomic, assign)NSInteger index;
 
 @end

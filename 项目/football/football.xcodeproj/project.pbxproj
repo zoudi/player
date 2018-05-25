@@ -30,6 +30,16 @@
 		C7E1D92A20B7CC4600384FE5 /* YGLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D92120B7CC4600384FE5 /* YGLoadingView.m */; };
 		C7E1D92B20B7CC4600384FE5 /* YGPlayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D92320B7CC4600384FE5 /* YGPlayInfo.m */; };
 		C7E1D92D20B7CC5700384FE5 /* playList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E1D92C20B7CC5700384FE5 /* playList.plist */; };
+		C7E1D93120B7EBCC00384FE5 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D93020B7EBCC00384FE5 /* WebViewController.m */; };
+		C7E1D93E20B7EFA200384FE5 /* SelectDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D93620B7EFA200384FE5 /* SelectDateVC.m */; };
+		C7E1D93F20B7EFA200384FE5 /* LoginTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D93720B7EFA200384FE5 /* LoginTableVC.m */; };
+		C7E1D94020B7EFA200384FE5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E1D93820B7EFA200384FE5 /* Login.storyboard */; };
+		C7E1D94120B7EFA200384FE5 /* UserMessageTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D93920B7EFA200384FE5 /* UserMessageTableVC.m */; };
+		C7E1D94220B7EFA200384FE5 /* FindPasswordTableViC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D93C20B7EFA200384FE5 /* FindPasswordTableViC.m */; };
+		C7E1D94320B7EFA200384FE5 /* RegisterTableViC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D93D20B7EFA200384FE5 /* RegisterTableViC.m */; };
+		C7E1D94620B7F05200384FE5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D94520B7F05200384FE5 /* BaseViewController.m */; };
+		C7E1D94920B7F28700384FE5 /* MBProgressHUD+ZD.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D94820B7F28700384FE5 /* MBProgressHUD+ZD.m */; };
+		C7E1D94C20B8021600384FE5 /* MineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D94B20B8021600384FE5 /* MineTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +104,25 @@
 		C7E1D92320B7CC4600384FE5 /* YGPlayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPlayInfo.m; sourceTree = "<group>"; };
 		C7E1D92420B7CC4600384FE5 /* YGPlayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPlayInfo.h; sourceTree = "<group>"; };
 		C7E1D92C20B7CC5700384FE5 /* playList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = playList.plist; sourceTree = "<group>"; };
+		C7E1D92F20B7EBCC00384FE5 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		C7E1D93020B7EBCC00384FE5 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		C7E1D93320B7EFA200384FE5 /* UserMessageTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMessageTableVC.h; sourceTree = "<group>"; };
+		C7E1D93420B7EFA200384FE5 /* FindPasswordTableViC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordTableViC.h; sourceTree = "<group>"; };
+		C7E1D93520B7EFA200384FE5 /* RegisterTableViC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViC.h; sourceTree = "<group>"; };
+		C7E1D93620B7EFA200384FE5 /* SelectDateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDateVC.m; sourceTree = "<group>"; };
+		C7E1D93720B7EFA200384FE5 /* LoginTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableVC.m; sourceTree = "<group>"; };
+		C7E1D93820B7EFA200384FE5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C7E1D93920B7EFA200384FE5 /* UserMessageTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMessageTableVC.m; sourceTree = "<group>"; };
+		C7E1D93A20B7EFA200384FE5 /* LoginTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableVC.h; sourceTree = "<group>"; };
+		C7E1D93B20B7EFA200384FE5 /* SelectDateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDateVC.h; sourceTree = "<group>"; };
+		C7E1D93C20B7EFA200384FE5 /* FindPasswordTableViC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordTableViC.m; sourceTree = "<group>"; };
+		C7E1D93D20B7EFA200384FE5 /* RegisterTableViC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViC.m; sourceTree = "<group>"; };
+		C7E1D94420B7F05200384FE5 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		C7E1D94520B7F05200384FE5 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		C7E1D94720B7F28700384FE5 /* MBProgressHUD+ZD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ZD.h"; sourceTree = "<group>"; };
+		C7E1D94820B7F28700384FE5 /* MBProgressHUD+ZD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ZD.m"; sourceTree = "<group>"; };
+		C7E1D94A20B8021600384FE5 /* MineTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableViewController.h; sourceTree = "<group>"; };
+		C7E1D94B20B8021600384FE5 /* MineTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableViewController.m; sourceTree = "<group>"; };
 		F1F9E0B973B7ECB42DD6FB51 /* Pods-football.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-football.release.xcconfig"; path = "Pods/Target Support Files/Pods-football/Pods-football.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,8 +194,9 @@
 		C731CF8E20AC092900F07E9E /* football */ = {
 			isa = PBXGroup;
 			children = (
+				C7E1D93220B7EFA200384FE5 /* Login */,
+				C7E1D92E20B7EBB800384FE5 /* Mine */,
 				C7E1D91420B7CC1600384FE5 /* Video */,
-				C7E1D8F720B7ADB300384FE5 /* Tool */,
 				C7E1D8F320B7A53B00384FE5 /* MoviePlayer */,
 				C731CFCB20AC334C00F07E9E /* Repository */,
 				C731CFC420AC192C00F07E9E /* CourseT */,
@@ -234,13 +264,6 @@
 			path = MoviePlayer;
 			sourceTree = "<group>";
 		};
-		C7E1D8F720B7ADB300384FE5 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
 		C7E1D91420B7CC1600384FE5 /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +282,12 @@
 				C7E1D91720B7CC4600384FE5 /* NSString+Time.h */,
 				C7E1D91820B7CC4600384FE5 /* YGVideoTool.m */,
 				C7E1D91920B7CC4600384FE5 /* NSString+Time.m */,
+				C7E1D92F20B7EBCC00384FE5 /* WebViewController.h */,
+				C7E1D93020B7EBCC00384FE5 /* WebViewController.m */,
+				C7E1D94420B7F05200384FE5 /* BaseViewController.h */,
+				C7E1D94520B7F05200384FE5 /* BaseViewController.m */,
+				C7E1D94720B7F28700384FE5 /* MBProgressHUD+ZD.h */,
+				C7E1D94820B7F28700384FE5 /* MBProgressHUD+ZD.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -284,6 +313,33 @@
 				C7E1D92420B7CC4600384FE5 /* YGPlayInfo.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C7E1D92E20B7EBB800384FE5 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				C7E1D94A20B8021600384FE5 /* MineTableViewController.h */,
+				C7E1D94B20B8021600384FE5 /* MineTableViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		C7E1D93220B7EFA200384FE5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C7E1D93320B7EFA200384FE5 /* UserMessageTableVC.h */,
+				C7E1D93420B7EFA200384FE5 /* FindPasswordTableViC.h */,
+				C7E1D93520B7EFA200384FE5 /* RegisterTableViC.h */,
+				C7E1D93620B7EFA200384FE5 /* SelectDateVC.m */,
+				C7E1D93720B7EFA200384FE5 /* LoginTableVC.m */,
+				C7E1D93820B7EFA200384FE5 /* Login.storyboard */,
+				C7E1D93920B7EFA200384FE5 /* UserMessageTableVC.m */,
+				C7E1D93A20B7EFA200384FE5 /* LoginTableVC.h */,
+				C7E1D93B20B7EFA200384FE5 /* SelectDateVC.h */,
+				C7E1D93C20B7EFA200384FE5 /* FindPasswordTableViC.m */,
+				C7E1D93D20B7EFA200384FE5 /* RegisterTableViC.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +449,7 @@
 			files = (
 				C731CF9C20AC092B00F07E9E /* LaunchScreen.storyboard in Resources */,
 				C7E1D92D20B7CC5700384FE5 /* playList.plist in Resources */,
+				C7E1D94020B7EFA200384FE5 /* Login.storyboard in Resources */,
 				C7E1D92820B7CC4600384FE5 /* YGPlayerView.xib in Resources */,
 				C731CF9920AC092B00F07E9E /* Assets.xcassets in Resources */,
 				C731CF9720AC092900F07E9E /* Main.storyboard in Resources */,
@@ -423,10 +480,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-football/Pods-football-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,15 +522,24 @@
 			files = (
 				C731CFCA20AC1F7100F07E9E /* CourseSectionTableVC.m in Sources */,
 				C731CFC320AC0D5A00F07E9E /* CourseTableVC.m in Sources */,
+				C7E1D94320B7EFA200384FE5 /* RegisterTableViC.m in Sources */,
 				C731CF9420AC092900F07E9E /* ViewController.m in Sources */,
 				C7E1D92620B7CC4600384FE5 /* NSString+Time.m in Sources */,
 				C731CFC720AC195200F07E9E /* CourseModel.m in Sources */,
+				C7E1D93F20B7EFA200384FE5 /* LoginTableVC.m in Sources */,
 				C7E1D92920B7CC4600384FE5 /* YGBrightnessAndVolumeView.m in Sources */,
+				C7E1D94220B7EFA200384FE5 /* FindPasswordTableViC.m in Sources */,
 				C731CF9F20AC092B00F07E9E /* main.m in Sources */,
 				C731CFD120AC344A00F07E9E /* RepositoryModel.m in Sources */,
 				C731CFCE20AC337300F07E9E /* RepositoryTableVC.m in Sources */,
+				C7E1D94C20B8021600384FE5 /* MineTableViewController.m in Sources */,
+				C7E1D94120B7EFA200384FE5 /* UserMessageTableVC.m in Sources */,
+				C7E1D94620B7F05200384FE5 /* BaseViewController.m in Sources */,
 				C7E1D8F620B7A55200384FE5 /* ZDMoviePlayerController.m in Sources */,
 				C7E1D92720B7CC4600384FE5 /* YGPlayerView.m in Sources */,
+				C7E1D93120B7EBCC00384FE5 /* WebViewController.m in Sources */,
+				C7E1D93E20B7EFA200384FE5 /* SelectDateVC.m in Sources */,
+				C7E1D94920B7F28700384FE5 /* MBProgressHUD+ZD.m in Sources */,
 				C7E1D92A20B7CC4600384FE5 /* YGLoadingView.m in Sources */,
 				C731CF9120AC092900F07E9E /* AppDelegate.m in Sources */,
 				C7E1D92B20B7CC4600384FE5 /* YGPlayInfo.m in Sources */,
@@ -644,14 +714,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BH4Z76H7M6;
 				INFOPLIST_FILE = football/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-11.football";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -661,14 +733,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BH4Z76H7M6;
 				INFOPLIST_FILE = football/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-11.football";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
