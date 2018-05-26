@@ -80,7 +80,6 @@
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
              id tempObj = [NSJSONSerialization JSONObjectWithData:responseObject options:(NSJSONReadingAllowFragments) error:nil];
              NSDictionary *dict = tempObj;
-             NSLog(@"====%@",dict);
              for (NSDictionary *tempDict in [[dict objectForKey:@"data"] objectForKey:@"datalist"]) {
                  CourseModel *model = [[CourseModel alloc]init];
                  [model setValuesForKeysWithDictionary:tempDict];
@@ -149,6 +148,7 @@
                 [data addObject:playInfo];
             }
         }
+        vc.videoClassifyId = [NSString stringWithFormat:@"%ld",self.pid];
         vc.dataArray = data;
     }
     // Get the new view controller using [segue destinationViewController].

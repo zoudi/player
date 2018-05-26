@@ -21,6 +21,8 @@
 		C731CFCA20AC1F7100F07E9E /* CourseSectionTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C731CFC920AC1F7100F07E9E /* CourseSectionTableVC.m */; };
 		C731CFCE20AC337300F07E9E /* RepositoryTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C731CFCD20AC337300F07E9E /* RepositoryTableVC.m */; };
 		C731CFD120AC344A00F07E9E /* RepositoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C731CFD020AC344A00F07E9E /* RepositoryModel.m */; };
+		C73467EE20B8477B00CEFDCB /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C73467ED20B8477B00CEFDCB /* CommentModel.m */; };
+		C73467F120B8480E00CEFDCB /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C73467F020B8480E00CEFDCB /* UserModel.m */; };
 		C7E1D8F620B7A55200384FE5 /* ZDMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D8F520B7A55200384FE5 /* ZDMoviePlayerController.m */; };
 		C7E1D92520B7CC4600384FE5 /* YGVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D91820B7CC4600384FE5 /* YGVideoTool.m */; };
 		C7E1D92620B7CC4600384FE5 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D91920B7CC4600384FE5 /* NSString+Time.m */; };
@@ -88,6 +90,10 @@
 		C731CFCD20AC337300F07E9E /* RepositoryTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepositoryTableVC.m; sourceTree = "<group>"; };
 		C731CFCF20AC344A00F07E9E /* RepositoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoryModel.h; sourceTree = "<group>"; };
 		C731CFD020AC344A00F07E9E /* RepositoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepositoryModel.m; sourceTree = "<group>"; };
+		C73467EC20B8477B00CEFDCB /* CommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		C73467ED20B8477B00CEFDCB /* CommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		C73467EF20B8480E00CEFDCB /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		C73467F020B8480E00CEFDCB /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		C7E1D8F420B7A55200384FE5 /* ZDMoviePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMoviePlayerController.h; sourceTree = "<group>"; };
 		C7E1D8F520B7A55200384FE5 /* ZDMoviePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDMoviePlayerController.m; sourceTree = "<group>"; };
 		C7E1D91620B7CC4600384FE5 /* YGVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGVideoTool.h; sourceTree = "<group>"; };
@@ -255,9 +261,21 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		C73467EB20B8475C00CEFDCB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C73467EC20B8477B00CEFDCB /* CommentModel.h */,
+				C73467ED20B8477B00CEFDCB /* CommentModel.m */,
+				C73467EF20B8480E00CEFDCB /* UserModel.h */,
+				C73467F020B8480E00CEFDCB /* UserModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		C7E1D8F320B7A53B00384FE5 /* MoviePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				C73467EB20B8475C00CEFDCB /* model */,
 				C7E1D8F420B7A55200384FE5 /* ZDMoviePlayerController.h */,
 				C7E1D8F520B7A55200384FE5 /* ZDMoviePlayerController.m */,
 			);
@@ -528,6 +546,7 @@
 				C731CFC720AC195200F07E9E /* CourseModel.m in Sources */,
 				C7E1D93F20B7EFA200384FE5 /* LoginTableVC.m in Sources */,
 				C7E1D92920B7CC4600384FE5 /* YGBrightnessAndVolumeView.m in Sources */,
+				C73467F120B8480E00CEFDCB /* UserModel.m in Sources */,
 				C7E1D94220B7EFA200384FE5 /* FindPasswordTableViC.m in Sources */,
 				C731CF9F20AC092B00F07E9E /* main.m in Sources */,
 				C731CFD120AC344A00F07E9E /* RepositoryModel.m in Sources */,
@@ -541,6 +560,7 @@
 				C7E1D93E20B7EFA200384FE5 /* SelectDateVC.m in Sources */,
 				C7E1D94920B7F28700384FE5 /* MBProgressHUD+ZD.m in Sources */,
 				C7E1D92A20B7CC4600384FE5 /* YGLoadingView.m in Sources */,
+				C73467EE20B8477B00CEFDCB /* CommentModel.m in Sources */,
 				C731CF9120AC092900F07E9E /* AppDelegate.m in Sources */,
 				C7E1D92B20B7CC4600384FE5 /* YGPlayInfo.m in Sources */,
 				C7E1D92520B7CC4600384FE5 /* YGVideoTool.m in Sources */,

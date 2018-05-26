@@ -57,7 +57,7 @@
     }else{
         self.userName.text = @"";
         self.signature.text = @"";
-        self.userImage.image = [[UIImage alloc]init];
+        self.userImage.image = [UIImage imageNamed:@"user_default"];
         self.userSex.image = [[UIImage alloc]init];
         self.login.text = @"登陆";
     }
@@ -71,7 +71,7 @@
             UserMessageTableVC *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:@"UserMessageTableVC"];
             [self.navigationController pushViewController:vc animated:YES];
         }else{
-            [self login];
+            [self logOut];
         }
     }else if (indexPath.section == 5){
         [self logOut];
