@@ -10,6 +10,8 @@
 #import "IQKeyboardManager.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "WebViewController.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
 
 @interface AppDelegate ()
 
@@ -19,7 +21,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [AMapServices sharedServices].apiKey =@"b757beacf3e95054aa9b44be4b92c1c1";
     [AVOSCloud setApplicationId:@"4M63gU82yYNQTPoTfuy1QrpP-gzGzoHsz" clientKey:@"K807wIChVVoS5AnjNxKAbmSi"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
  

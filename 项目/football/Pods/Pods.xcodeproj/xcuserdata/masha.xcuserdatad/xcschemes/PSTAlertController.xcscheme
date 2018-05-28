@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "691EFEAE5DB38166E40A90E7CE360478"
+               BlueprintIdentifier = "46DF542ADFBB5D38B3983125D90401B5"
                BlueprintName = "PSTAlertController"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPSTAlertController.a">

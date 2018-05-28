@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1AFE3D43B6BB05A023ED73ED /* libPods-football.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB4DB1DA8753B3B4DE16DB6 /* libPods-football.a */; };
+		C71D6C3820BBC9DD00CD13A9 /* CommunityTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C71D6C3720BBC9DD00CD13A9 /* CommunityTableVC.m */; };
+		C71D6C3B20BBCBB700CD13A9 /* PublishTopicTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C71D6C3A20BBCBB700CD13A9 /* PublishTopicTableVC.m */; };
+		C71D6C3E20BBD29E00CD13A9 /* UITextView+WZB.m in Sources */ = {isa = PBXBuildFile; fileRef = C71D6C3D20BBD29D00CD13A9 /* UITextView+WZB.m */; };
+		C71D6C4120BBDB4700CD13A9 /* SelectLocationTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C71D6C4020BBDB4700CD13A9 /* SelectLocationTableVC.m */; };
+		C71D6C4420BBFBFE00CD13A9 /* InvitationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C71D6C4320BBFBFE00CD13A9 /* InvitationModel.m */; };
 		C731CF9120AC092900F07E9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C731CF9020AC092900F07E9E /* AppDelegate.m */; };
 		C731CF9420AC092900F07E9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C731CF9320AC092900F07E9E /* ViewController.m */; };
 		C731CF9720AC092900F07E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C731CF9520AC092900F07E9E /* Main.storyboard */; };
@@ -64,6 +69,16 @@
 /* Begin PBXFileReference section */
 		1DB4DB1DA8753B3B4DE16DB6 /* libPods-football.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-football.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		313333665CE27F0FA761C3D1 /* Pods-football.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-football.debug.xcconfig"; path = "Pods/Target Support Files/Pods-football/Pods-football.debug.xcconfig"; sourceTree = "<group>"; };
+		C71D6C3620BBC9DD00CD13A9 /* CommunityTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityTableVC.h; sourceTree = "<group>"; };
+		C71D6C3720BBC9DD00CD13A9 /* CommunityTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityTableVC.m; sourceTree = "<group>"; };
+		C71D6C3920BBCBB700CD13A9 /* PublishTopicTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishTopicTableVC.h; sourceTree = "<group>"; };
+		C71D6C3A20BBCBB700CD13A9 /* PublishTopicTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishTopicTableVC.m; sourceTree = "<group>"; };
+		C71D6C3C20BBD29D00CD13A9 /* UITextView+WZB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+WZB.h"; sourceTree = "<group>"; };
+		C71D6C3D20BBD29D00CD13A9 /* UITextView+WZB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+WZB.m"; sourceTree = "<group>"; };
+		C71D6C3F20BBDB4700CD13A9 /* SelectLocationTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectLocationTableVC.h; sourceTree = "<group>"; };
+		C71D6C4020BBDB4700CD13A9 /* SelectLocationTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectLocationTableVC.m; sourceTree = "<group>"; };
+		C71D6C4220BBFBFE00CD13A9 /* InvitationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvitationModel.h; sourceTree = "<group>"; };
+		C71D6C4320BBFBFE00CD13A9 /* InvitationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvitationModel.m; sourceTree = "<group>"; };
 		C731CF8C20AC092900F07E9E /* football.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = football.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C731CF8F20AC092900F07E9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C731CF9020AC092900F07E9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,6 +190,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C71D6C3520BBC9B100CD13A9 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				C71D6C3620BBC9DD00CD13A9 /* CommunityTableVC.h */,
+				C71D6C3720BBC9DD00CD13A9 /* CommunityTableVC.m */,
+				C71D6C3920BBCBB700CD13A9 /* PublishTopicTableVC.h */,
+				C71D6C3A20BBCBB700CD13A9 /* PublishTopicTableVC.m */,
+				C71D6C3F20BBDB4700CD13A9 /* SelectLocationTableVC.h */,
+				C71D6C4020BBDB4700CD13A9 /* SelectLocationTableVC.m */,
+				C71D6C4220BBFBFE00CD13A9 /* InvitationModel.h */,
+				C71D6C4320BBFBFE00CD13A9 /* InvitationModel.m */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
 		C731CF8320AC092900F07E9E = {
 			isa = PBXGroup;
 			children = (
@@ -200,9 +230,9 @@
 		C731CF8E20AC092900F07E9E /* football */ = {
 			isa = PBXGroup;
 			children = (
+				C71D6C3520BBC9B100CD13A9 /* Community */,
 				C7E1D93220B7EFA200384FE5 /* Login */,
 				C7E1D92E20B7EBB800384FE5 /* Mine */,
-				C7E1D91420B7CC1600384FE5 /* Video */,
 				C7E1D8F320B7A53B00384FE5 /* MoviePlayer */,
 				C731CFCB20AC334C00F07E9E /* Repository */,
 				C731CFC420AC192C00F07E9E /* CourseT */,
@@ -275,6 +305,7 @@
 		C7E1D8F320B7A53B00384FE5 /* MoviePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				C7E1D91420B7CC1600384FE5 /* Video */,
 				C73467EB20B8475C00CEFDCB /* model */,
 				C7E1D8F420B7A55200384FE5 /* ZDMoviePlayerController.h */,
 				C7E1D8F520B7A55200384FE5 /* ZDMoviePlayerController.m */,
@@ -296,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				C7E1D92C20B7CC5700384FE5 /* playList.plist */,
+				C71D6C3C20BBD29D00CD13A9 /* UITextView+WZB.h */,
+				C71D6C3D20BBD29D00CD13A9 /* UITextView+WZB.m */,
 				C7E1D91620B7CC4600384FE5 /* YGVideoTool.h */,
 				C7E1D91720B7CC4600384FE5 /* NSString+Time.h */,
 				C7E1D91820B7CC4600384FE5 /* YGVideoTool.m */,
@@ -544,6 +577,8 @@
 				C731CF9420AC092900F07E9E /* ViewController.m in Sources */,
 				C7E1D92620B7CC4600384FE5 /* NSString+Time.m in Sources */,
 				C731CFC720AC195200F07E9E /* CourseModel.m in Sources */,
+				C71D6C3820BBC9DD00CD13A9 /* CommunityTableVC.m in Sources */,
+				C71D6C3B20BBCBB700CD13A9 /* PublishTopicTableVC.m in Sources */,
 				C7E1D93F20B7EFA200384FE5 /* LoginTableVC.m in Sources */,
 				C7E1D92920B7CC4600384FE5 /* YGBrightnessAndVolumeView.m in Sources */,
 				C73467F120B8480E00CEFDCB /* UserModel.m in Sources */,
@@ -553,8 +588,11 @@
 				C731CFCE20AC337300F07E9E /* RepositoryTableVC.m in Sources */,
 				C7E1D94C20B8021600384FE5 /* MineTableViewController.m in Sources */,
 				C7E1D94120B7EFA200384FE5 /* UserMessageTableVC.m in Sources */,
+				C71D6C3E20BBD29E00CD13A9 /* UITextView+WZB.m in Sources */,
 				C7E1D94620B7F05200384FE5 /* BaseViewController.m in Sources */,
 				C7E1D8F620B7A55200384FE5 /* ZDMoviePlayerController.m in Sources */,
+				C71D6C4120BBDB4700CD13A9 /* SelectLocationTableVC.m in Sources */,
+				C71D6C4420BBFBFE00CD13A9 /* InvitationModel.m in Sources */,
 				C7E1D92720B7CC4600384FE5 /* YGPlayerView.m in Sources */,
 				C7E1D93120B7EBCC00384FE5 /* WebViewController.m in Sources */,
 				C7E1D93E20B7EFA200384FE5 /* SelectDateVC.m in Sources */,
@@ -741,7 +779,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-11.football";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zdfootBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -760,7 +798,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-11.football";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zdfootBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -14,8 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AMapFoundation (1.5.0)
+  - AMapLocation (2.6.0):
+    - AMapFoundation (~> 1.4)
+  - AMapSearch (6.1.0):
+    - AMapFoundation (~> 1.4)
   - AVOSCloud (10.3.1)
-  - FSTextView (1.8)
   - IQKeyboardManager (3.3.7)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
@@ -28,8 +32,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - AMapLocation
+  - AMapSearch
   - AVOSCloud
-  - FSTextView
   - IQKeyboardManager
   - Masonry
   - MBProgressHUD
@@ -41,8 +46,10 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - AMapFoundation
+    - AMapLocation
+    - AMapSearch
     - AVOSCloud
-    - FSTextView
     - IQKeyboardManager
     - Masonry
     - MBProgressHUD
@@ -53,8 +60,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AMapFoundation: 04fc43736ed63bed15d502e20f74ded399991f1e
+  AMapLocation: 55116a2c8956eab7550cbb56e989aa5cdcc424e3
+  AMapSearch: e3f96bd0681abe70abba303709a1a05625a8f76c
   AVOSCloud: f6f1523045495dd1368faa3d6adf21187f9498a7
-  FSTextView: 9e2ca07bb6bb0fb7e77b49b2717adf81f3c620b5
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -63,6 +72,6 @@ SPEC CHECKSUMS:
   PSTAlertController: 9b802dfbda54fee2683bfd6dda7023a6de895d5b
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 3277bd60165b8561b159320f8c44437e43de2373
+PODFILE CHECKSUM: 1c73359dfe417b816037d99a3751728444e7a0a2
 
 COCOAPODS: 1.5.2

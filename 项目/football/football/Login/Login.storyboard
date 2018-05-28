@@ -281,7 +281,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Otc-TV-hXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="53"/>
+            <point key="canvasLocation" x="665" y="53"/>
         </scene>
         <!--用户协议与隐私条款-->
         <scene sceneID="9jm-mX-78K">
@@ -508,7 +508,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEX-SJ-IzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="877"/>
+            <point key="canvasLocation" x="665" y="867"/>
         </scene>
         <!--重置密码-->
         <scene sceneID="EiV-Lj-EMV">
@@ -600,7 +600,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bt9-fJ-xCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="877"/>
+            <point key="canvasLocation" x="1366" y="867"/>
         </scene>
         <!--用户信息-->
         <scene sceneID="NH7-Rg-2mL">
@@ -742,14 +742,11 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XZ1-pv-caZ" customClass="FSTextView">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XZ1-pv-caZ">
                                                     <rect key="frame" x="101" y="12" width="254" height="82.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="请填写个性签名"/>
-                                                    </userDefinedRuntimeAttributes>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -794,7 +791,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1146" y="53"/>
+            <point key="canvasLocation" x="1366" y="53"/>
         </scene>
         <!--选择生日-->
         <scene sceneID="Jnu-3Y-Lkx">
@@ -864,10 +861,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJg-0o-Yvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="53"/>
+            <point key="canvasLocation" x="2134" y="53"/>
         </scene>
     </scenes>
     <resources>
-        <image name="user_default" width="80" height="80"/>
+        <image name="user_default" width="66" height="66"/>
     </resources>
 </document>

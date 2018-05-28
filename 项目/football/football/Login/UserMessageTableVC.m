@@ -8,19 +8,19 @@
 
 #import "UserMessageTableVC.h"
 #import <AVOSCloud/AVOSCloud.h>
-#import "FSTextView.h"
 #import "PSTAlertController.h"
 #import "MBProgressHUD+ZD.h"
 #import "LoginTableVC.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "UIImageView+WebCache.h"
 #import "SelectDateVC.h"
+#import "UITextView+WZB.h"
 
 @interface UserMessageTableVC ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *userSex;
 @property (weak, nonatomic) IBOutlet UITextField *userBirthday;
-@property (weak, nonatomic) IBOutlet FSTextView *userSignature;
+@property (weak, nonatomic) IBOutlet UITextView *userSignature;
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
 
 @property (nonatomic) BOOL imageBool;
@@ -49,6 +49,8 @@
         }
         
     }
+    self.userSignature.wzb_placeholder = @"请填写个性签名";
+    self.userSignature.wzb_placeholderColor = [UIColor lightGrayColor];
     
 }
 

@@ -73,7 +73,7 @@
         }else{
             [self logOut];
         }
-    }else if (indexPath.section == 5){
+    }else if (indexPath.section == 4){
         [self logOut];
     }
 }
