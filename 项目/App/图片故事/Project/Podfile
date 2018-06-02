@@ -3,7 +3,7 @@ target 'Project' do
 pod 'MJRefresh'
 pod 'SDWebImage'
 pod 'AVOSCloud'
-pod 'BmobSDK'
+#pod 'BmobSDK'
 pod 'FMDB'
 pod 'PSTAlertController'
 pod 'FSTextView'
@@ -11,5 +11,6 @@ pod 'FSTextView'
 #pod 'RongCloudIM/IMKit'
 #pod 'mob_smssdk'
 pod 'IQKeyboardManager'
+pod 'JPush'
 end
 

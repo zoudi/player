@@ -8,9 +8,13 @@
 
 #import "AppDelegate.h"
 #import "WebViewController.h"
-#import <BmobSDK/Bmob.h>
+//#import <BmobSDK/Bmob.h>
 #import <AVOSCloud/AVOSCloud.h>
 #import "IQKeyboardManager.h"
+#import "JPUSHService.h"
+// iOS10注册APNs所需头文件
+//#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
 
 
 @interface AppDelegate ()
@@ -22,40 +26,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    [Bmob registerWithAppKey:@"7debb4475040a795e9b1e6e347fff55e"];
-
-    /*BmobObject *gameScore = [BmobObject objectWithClassName:@"AppURL"];
-    [gameScore setObject:@"第一个APP" forKey:@"AppName"];
-    [gameScore setObject:@"https://www.baidu.com" forKey:@"url"];
-    [gameScore saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
-        //进行操作
-    }];*/
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        // 可以添加自定义categories
+        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
+        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+    }
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0]; //清除角标
     
-    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"AppURL"];
-    [bquery getObjectInBackgroundWithId:@"fb4a52f943" block:^(BmobObject *object,NSError *error){
-        if (!error){
-            if (object != nil && object != NULL && [object objectForKey:@"url"]) {
-                NSString *urlSrt = [object objectForKey:@"url"];
-                if ([urlSrt hasPrefix:@"http://"]||[urlSrt hasPrefix:@"https://"]) {
-                    NSURL *url = [NSURL URLWithString:[object objectForKey:@"url"]];
-                    WebViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WebViewController"];
-                    VC.url = url;
-                    self.window.rootViewController = VC;
-                }
-            }
-        }
-        
-    }];
-    [AVOSCloud setApplicationId:@"TuiWU4ddFOtOrbptiJr0AwVg-gzGzoHsz" clientKey:@"tM2WE3wL11isaGA1ooeUGWNL"];
+    [JPUSHService setupWithOption:launchOptions appKey:@"b9ff0e24ead8ebc56e31d33b"
+                          channel:@"App Store"
+                 apsForProduction:YES
+            advertisingIdentifier:nil];
+  
+    [AVOSCloud setApplicationId:@"nkVdnOrEIqirnYJw6cweDzB5-gzGzoHsz" clientKey:@"yUAAt272PnaRxHywjOmYRx7r"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
     AVQuery *query = [AVQuery queryWithClassName:@"WebURL"];
-    [query getObjectInBackgroundWithId:@"5afa42c1ac502e3c23c22096" block:^(AVObject *object, NSError *error) {
+    [query getObjectInBackgroundWithId:@"5b111df8a22b9d00327e4bc4" block:^(AVObject *object, NSError *error) {
         if (object != nil && object != NULL && [object objectForKey:@"url"]) {
             NSString *urlSrt = [object objectForKey:@"url"];
-            if ([urlSrt hasPrefix:@"run"]) {
-                NSArray *array = @[];
-                [array objectAtIndex:2];
+            if ([urlSrt hasPrefix:@"http://"]||[urlSrt hasPrefix:@"https://"]) {
+                NSURL *url = [NSURL URLWithString:[object objectForKey:@"url"]];
+                WebViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WebViewController"];
+                VC.url = url;
+                self.window.rootViewController = VC;
             }
         }
 
@@ -91,6 +88,46 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    /// Required - 注册 DeviceToken
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+#pragma mark- JPUSHRegisterDelegate
+
+// iOS 10 Support
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
+    // Required
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+    }
+    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
+}
+
+// iOS 10 Support
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    // Required
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+    }
+    completionHandler();  // 系统要求执行这个方法
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    // Required, iOS 7 Support
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required,For systems with less than or equal to iOS6
+    [JPUSHService handleRemoteNotification:userInfo];
 }
 
 

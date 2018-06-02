@@ -136,7 +136,7 @@ static DataBase *_DBCtl = nil;
     [_db close];*/
 }
 /**
- *  查询person
+ *  查询person  
  *
  */
 - (PictureStoryModel *)pictureWithId:(NSString *)mId{

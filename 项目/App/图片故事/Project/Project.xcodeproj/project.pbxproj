@@ -93,6 +93,7 @@
 		C78B463220AD5C2200A9D076 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		C78B463920AD6B7400A9D076 /* MineTableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableViewVC.h; sourceTree = "<group>"; };
 		C78B463A20AD6B7400A9D076 /* MineTableViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableViewVC.m; sourceTree = "<group>"; };
+		C791439820C15A650024A953 /* Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project.entitlements; sourceTree = "<group>"; };
 		C7A5426620AA9E0A005393C1 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A5426920AA9E0A005393C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7A5426A20AA9E0A005393C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -264,6 +265,7 @@
 		C7A5426820AA9E0A005393C1 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				C791439820C15A650024A953 /* Project.entitlements */,
 				C7C8549C20AFC51000351266 /* Login */,
 				C78B462620AD3A9200A9D076 /* Author */,
 				C7A542B520AA9ED3005393C1 /* Album */,
@@ -486,6 +488,11 @@
 				TargetAttributes = {
 					C7A5426520AA9E0A005393C1 = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					C7A5427D20AA9E0A005393C1 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -796,6 +803,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Project/Project.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BH4Z76H7M6;
@@ -817,6 +825,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Project/Project.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BH4Z76H7M6;
