@@ -13,6 +13,72 @@
     </dependencies>
     <scenes>
         <!--课程-->
+        <scene sceneID="gfu-48-QhV">
+            <objects>
+                <collectionViewController storyboardIdentifier="CourseCollectionVC" id="2Tt-VZ-HVV" customClass="CourseCollectionVC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8ZY-K7-q82">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9PX-no-gFk">
+                            <size key="itemSize" width="167" height="191"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoureseCollectionCellItem" id="5vx-Lo-wxq" customClass="CoureseCollectionCellItem">
+                                <rect key="frame" x="10" y="10" width="167" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="191"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AgV-4d-yi7">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="191"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWR-Qz-Qbt">
+                                            <rect key="frame" x="63.5" y="163" width="40" height="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AgV-4d-yi7" secondAttribute="trailing" id="79N-RU-QOd"/>
+                                    <constraint firstAttribute="bottom" secondItem="OWR-Qz-Qbt" secondAttribute="bottom" constant="10" id="J0C-3Y-Cz7"/>
+                                    <constraint firstItem="AgV-4d-yi7" firstAttribute="top" secondItem="5vx-Lo-wxq" secondAttribute="top" id="QP8-B0-fPs"/>
+                                    <constraint firstAttribute="bottom" secondItem="AgV-4d-yi7" secondAttribute="bottom" id="SuL-oh-4Nd"/>
+                                    <constraint firstItem="AgV-4d-yi7" firstAttribute="leading" secondItem="5vx-Lo-wxq" secondAttribute="leading" id="bUc-FC-R4x"/>
+                                    <constraint firstItem="OWR-Qz-Qbt" firstAttribute="centerX" secondItem="5vx-Lo-wxq" secondAttribute="centerX" id="jVj-uC-EOd"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="courseImage" destination="AgV-4d-yi7" id="oOh-u0-ARA"/>
+                                    <outlet property="courseName" destination="OWR-Qz-Qbt" id="u3Q-Nb-wqQ"/>
+                                    <segue destination="fAQ-MJ-AnS" kind="push" identifier="CourseSection" id="Vzc-wT-MR3"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="2Tt-VZ-HVV" id="Cwb-gA-uQf"/>
+                            <outlet property="delegate" destination="2Tt-VZ-HVV" id="n8f-zr-iWS"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="课程" id="Fvb-HG-igT"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prs-Tq-P1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="-216"/>
+        </scene>
+        <!--课程-->
         <scene sceneID="lYA-eh-xVv">
             <objects>
                 <tableViewController storyboardIdentifier="CourseTableVC" id="dgy-zq-6Pl" customClass="CourseTableVC" sceneMemberID="viewController">
@@ -64,7 +130,6 @@
                                 <connections>
                                     <outlet property="courseImage" destination="4vy-yZ-HgO" id="TSS-Sb-b5B"/>
                                     <outlet property="courseName" destination="4fq-Dz-KWv" id="kxv-TT-X2N"/>
-                                    <segue destination="fAQ-MJ-AnS" kind="push" identifier="CourseSection" id="1sX-hN-aD6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,7 +142,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdF-iU-iek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344.8" y="-216.34182908545728"/>
+            <point key="canvasLocation" x="1806" y="-1223"/>
         </scene>
         <!--Course Section TableVC-->
         <scene sceneID="FFW-ST-0x4">
@@ -108,27 +173,53 @@
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlQ-eU-GrE">
-                                            <rect key="frame" x="174.5" y="42" width="190.5" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlQ-eU-GrE">
+                                            <rect key="frame" x="169.5" y="21.5" width="195.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYp-Lz-gTE">
+                                            <rect key="frame" x="309" y="65" width="56" height="29"/>
+                                            <color key="backgroundColor" red="0.95294117649999999" green="0.4941176471" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="56" id="Unl-xW-xZ9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <state key="normal" title="下载">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="downloadBtnClick:" destination="Ieg-lY-fAT" eventType="touchUpInside" id="7YA-Kg-C2E"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="d7c-b0-c0n" firstAttribute="leading" secondItem="ba4-aY-FVQ" secondAttribute="leading" constant="15" id="D1R-Lf-mE9"/>
+                                        <constraint firstAttribute="trailing" secondItem="hlQ-eU-GrE" secondAttribute="trailing" constant="10" id="4k8-Ba-fTu"/>
+                                        <constraint firstItem="hlQ-eU-GrE" firstAttribute="leading" secondItem="d7c-b0-c0n" secondAttribute="trailing" constant="10" id="6or-3Y-F2p"/>
+                                        <constraint firstAttribute="trailing" secondItem="gYp-Lz-gTE" secondAttribute="trailing" constant="10" id="CVM-49-VPU"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="d7c-b0-c0n" secondAttribute="bottom" constant="7" id="UFS-Ue-6co"/>
-                                        <constraint firstItem="hlQ-eU-GrE" firstAttribute="leading" secondItem="d7c-b0-c0n" secondAttribute="trailing" constant="15" id="Zt0-RH-jeu"/>
                                         <constraint firstItem="d7c-b0-c0n" firstAttribute="top" secondItem="ba4-aY-FVQ" secondAttribute="top" constant="7" id="bIS-05-1tB"/>
-                                        <constraint firstAttribute="trailing" secondItem="hlQ-eU-GrE" secondAttribute="trailing" constant="10" id="pHQ-XI-9Qb"/>
-                                        <constraint firstItem="hlQ-eU-GrE" firstAttribute="centerY" secondItem="d7c-b0-c0n" secondAttribute="centerY" id="wrS-Lq-1K9"/>
+                                        <constraint firstItem="gYp-Lz-gTE" firstAttribute="bottom" secondItem="d7c-b0-c0n" secondAttribute="bottom" id="iys-ku-LQt"/>
+                                        <constraint firstItem="d7c-b0-c0n" firstAttribute="leading" secondItem="ba4-aY-FVQ" secondAttribute="leading" constant="15" id="vor-BR-FfG"/>
+                                        <constraint firstItem="hlQ-eU-GrE" firstAttribute="centerY" secondItem="d7c-b0-c0n" secondAttribute="centerY" constant="-20" id="wrS-Lq-1K9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="couresImage" destination="d7c-b0-c0n" id="tyZ-0A-nqd"/>
                                     <outlet property="couresName" destination="hlQ-eU-GrE" id="JLr-nz-Sws"/>
+                                    <outlet property="downloadBtn" destination="gYp-Lz-gTE" id="p2v-4B-eNa"/>
                                     <segue destination="1nK-tn-ukL" kind="push" identifier="pushVideo" id="jBp-g1-SGV"/>
                                 </connections>
                             </tableViewCell>
@@ -142,7 +233,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6e-SE-K6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2096.8000000000002" y="-216.34182908545728"/>
+            <point key="canvasLocation" x="2113" y="-216"/>
         </scene>
         <!--Movie Player Controller-->
         <scene sceneID="UEQ-gH-l8P">
@@ -384,12 +475,18 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0p-D6-pTz">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="R2p-jt-4gn">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="R2p-jt-4gn">
                                                             <rect key="frame" x="15" y="5" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="6An-tB-UJ2"/>
                                                                 <constraint firstAttribute="height" constant="40" id="Pcu-Dc-5qQ"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJz-qX-YCk">
                                                             <rect key="frame" x="70" y="5" width="38" height="18"/>
@@ -572,7 +669,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="dgy-zq-6Pl" kind="relationship" relationship="rootViewController" id="Zwd-9A-5Gv"/>
+                        <segue destination="2Tt-VZ-HVV" kind="relationship" relationship="rootViewController" id="U0n-ny-Nsp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3k-hD-orX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -708,12 +805,18 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bd-Ez-Qr8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-ld-jMe">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-ld-jMe">
                                                     <rect key="frame" x="15" y="5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="tFt-Se-Es9"/>
                                                         <constraint firstAttribute="width" constant="40" id="yZT-q5-l70"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nll-Wu-q09">
                                                     <rect key="frame" x="70" y="5" width="38" height="18"/>
@@ -847,13 +950,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_default" translatesAutoresizingMaskIntoConstraints="NO" id="CfC-yW-s6o">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_default" translatesAutoresizingMaskIntoConstraints="NO" id="CfC-yW-s6o">
                                                     <rect key="frame" x="20" y="12.5" width="45" height="45"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="N9a-Ix-RI5"/>
                                                         <constraint firstAttribute="width" constant="45" id="Slu-mv-kOD"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EO-Ga-BlH">
                                                     <rect key="frame" x="75" y="12.5" width="38" height="18"/>
@@ -919,18 +1028,15 @@
                             </tableViewSection>
                             <tableViewSection id="g9n-nC-Kzf">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yfr-TA-iYt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="yfr-TA-iYt">
                                         <rect key="frame" x="0.0" y="173" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yfr-TA-iYt" id="2iA-1Z-MG9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登陆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNE-iY-0Tu">
-                                                    <rect key="frame" x="147.5" y="11" width="80" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="ZdW-1r-OvS"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本地下载" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNE-iY-0Tu">
+                                                    <rect key="frame" x="15" y="11" width="69.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -938,7 +1044,34 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rNE-iY-0Tu" firstAttribute="centerY" secondItem="2iA-1Z-MG9" secondAttribute="centerY" id="Wd0-Pk-md9"/>
-                                                <constraint firstItem="rNE-iY-0Tu" firstAttribute="centerX" secondItem="2iA-1Z-MG9" secondAttribute="centerX" id="ZBe-ch-WiX"/>
+                                                <constraint firstItem="rNE-iY-0Tu" firstAttribute="leading" secondItem="2iA-1Z-MG9" secondAttribute="leading" constant="15" id="zDV-kd-IId"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="8Fd-Md-GFP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4q2-ys-smq">
+                                        <rect key="frame" x="0.0" y="236" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4q2-ys-smq" id="kzL-ab-YRA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登陆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTe-TO-um0">
+                                                    <rect key="frame" x="147.5" y="11" width="80" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="CNS-ZB-lZr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RTe-TO-um0" firstAttribute="centerX" secondItem="kzL-ab-YRA" secondAttribute="centerX" id="Bam-tZ-gtd"/>
+                                                <constraint firstItem="RTe-TO-um0" firstAttribute="centerY" secondItem="kzL-ab-YRA" secondAttribute="centerY" id="PZW-N1-uue"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -952,7 +1085,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="我的" id="Am3-bC-nMq"/>
                     <connections>
-                        <outlet property="login" destination="rNE-iY-0Tu" id="Syn-XR-hl8"/>
                         <outlet property="signature" destination="36y-TX-PLM" id="Pq4-WY-ZRV"/>
                         <outlet property="userImage" destination="CfC-yW-s6o" id="zD9-mh-cNo"/>
                         <outlet property="userName" destination="0EO-Ga-BlH" id="SKG-S4-BoO"/>
@@ -1107,12 +1239,18 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcK-AV-ely">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="km4-Vn-Rkl">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="km4-Vn-Rkl">
                                                     <rect key="frame" x="15" y="5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="FVk-a3-XQc"/>
                                                         <constraint firstAttribute="height" constant="40" id="Zcj-r3-rGV"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OT-AE-41U">
                                                     <rect key="frame" x="70" y="5" width="38" height="18"/>
@@ -1205,12 +1343,18 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-hU-V7S">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="nR8-qN-Wp8">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="nR8-qN-Wp8">
                                                             <rect key="frame" x="15" y="5" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="1tc-eL-PuU"/>
                                                                 <constraint firstAttribute="height" constant="40" id="ubb-jx-o6i"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9x-pW-MIV">
                                                             <rect key="frame" x="70" y="5" width="38" height="18"/>

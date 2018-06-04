@@ -12,7 +12,11 @@
 #import "UIImageView+WebCache.h"
 #import "ZDMoviePlayerController.h"
 #import "YGPlayInfo.h"
-@interface CourseSectionTableVC ()
+#import "MJRefresh.h"
+#import "YCDownloadManager.h"
+#import "VideoCacheController.h"
+
+@interface CourseSectionTableVC ()<VideoListInfoCellDelegate>
 @property (nonatomic, strong)NSMutableArray *dataArray;
 
 @end
@@ -25,18 +29,42 @@
     return _dataArray;
 }
 - (void)viewDidLoad {
-    [super viewDidLoad];//http://skyapp.mackentan.com/app/v6/playlist.do?pid=149&t=1526451309000&did=gVFXdSxtHXf814c0770d&ver=172&it=423997&fit=423997&sign=8a90af38a2458ee1d1d48dd5e4d0b5e7210971ef&appid=com.jediapp.football&idfa=B329409F-B99C-4F9C-AD42-8F6E94703CC6
+    [super viewDidLoad];
+    __weak typeof(self) vc = self;
+    // 添加下拉刷新头部控件
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        [self.dataArray removeAllObjects];
+        [self loadData];
+        //        [vc.tableView reloadData];
+        // 结束刷新
+        [vc.tableView.mj_header endRefreshing];
+    }];
+    
+    // 马上进入刷新状态
+    [self.tableView.mj_header beginRefreshing];
+    
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)loadData{
     
     NSMutableDictionary *dic = [@{@"pid":@(self.pid),
-//                          @"t":@"1526451309000",
-                          @"did":@"gVFXdSxtHXf814c0770d",
-                          @"ver":@172,
-                          @"it":@"423997",
-                          @"fit":@"423997",
-//                          @"sign":@"8a90af38a2458ee1d1d48dd5e4d0b5e7210971ef",
-                          @"appid":@"com.jediapp.football",
-                          @"idfa":@"B329409F-B99C-4F9C-AD42-8F6E94703CC6"
-                          } mutableCopy];
+                                  //                          @"t":@"1526451309000",
+                                  @"did":@"gVFXdSxtHXf814c0770d",
+                                  @"ver":@172,
+                                  @"it":@"423997",
+                                  @"fit":@"423997",
+                                  //                          @"sign":@"8a90af38a2458ee1d1d48dd5e4d0b5e7210971ef",
+                                  @"appid":@"com.jediapp.football",
+                                  @"idfa":@"B329409F-B99C-4F9C-AD42-8F6E94703CC6"
+                                  } mutableCopy];
     if (self.pid == 149) {
         dic[@"t"]     = @"1526451309000";
         dic[@"sign"]  = @"8a90af38a2458ee1d1d48dd5e4d0b5e7210971ef";
@@ -69,7 +97,7 @@
         dic[@"t"]     = @"1526461432000";
         dic[@"sign"]  = @"f08bdba76c30b23d7fa6e0158b715c6152cc4d8a";
     }
-  
+    
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -94,12 +122,6 @@
              
              NSLog(@"%@",error);  //这里打印错误信息
          }];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -118,6 +140,7 @@
     if (self.dataArray.count) {
         cell.model = [self.dataArray objectAtIndex:indexPath.row];
     }
+    cell.delegate = self;
     // Configure the cell...
     
     return cell;
@@ -126,6 +149,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    ZDMoviePlayerController *video = [[ZDMoviePlayerController alloc] init];
 //    [self.navigationController pushViewController:video animated:YES];
+}
+
+- (void)videoListCell:(CourseSectionCell *)cell downloadVideo:(CourseModel *)model {
+//http://vodtest.lexue.com/video/71130874170909.mp4    资源问题不显示下载进度
+    [YCDownloadManager startDownloadWithUrl:model.url fileName:model.title thumbImageUrl:model.cover];
+    
+    VideoCacheController *vc = [[VideoCacheController alloc] init];
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 
@@ -162,6 +193,23 @@
 -(void)setModel:(CourseModel *)model{
     _model = model;
     self.couresName.text = model.title;
-    [self.couresImage sd_setImageWithURL:[NSURL URLWithString:model.cover] placeholderImage:[[UIImage alloc] init]];}
+    [self.couresImage sd_setImageWithURL:[NSURL URLWithString:model.cover] placeholderImage:[[UIImage alloc] init]];
+    
+}
 
+- (IBAction)downloadBtnClick:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(videoListCell:downloadVideo:)]) {
+        [self.delegate videoListCell:self downloadVideo:self.model];
+    }
+}
+
+- (void)setIsDownload:(BOOL)isDownload {
+    
+    _isDownload = isDownload;
+    if (isDownload) {
+        [self.downloadBtn setTitle:@"已下载" forState:UIControlStateNormal];
+    }else{
+        [self.downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
+    }
+}
 @end

@@ -31,6 +31,15 @@
 		C7569D0120BCFA940013F9C8 /* TopicMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7569D0020BCFA940013F9C8 /* TopicMessageVC.m */; };
 		C7569D0420BD27170013F9C8 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7569D0320BD27170013F9C8 /* FeedbackViewController.m */; };
 		C7569D0720BD41230013F9C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7569D0620BD41230013F9C8 /* BaseViewController.m */; };
+		C7A977CB20C29ABC00AA0C53 /* CourseCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A977CA20C29ABC00AA0C53 /* CourseCollectionVC.m */; };
+		C7D693F220C39F7700C6A403 /* YCDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D693E820C39F7700C6A403 /* YCDownloadManager.m */; };
+		C7D693F320C39F7700C6A403 /* YCDownloadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D693EE20C39F7700C6A403 /* YCDownloadItem.m */; };
+		C7D693F420C39F7700C6A403 /* YCDownloadSession.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D693EF20C39F7700C6A403 /* YCDownloadSession.m */; };
+		C7D693F520C39F7700C6A403 /* NSURLSession+CorrectedResumeData.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D693F020C39F7700C6A403 /* NSURLSession+CorrectedResumeData.m */; };
+		C7D693F620C39F7700C6A403 /* YCDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D693F120C39F7700C6A403 /* YCDownloadTask.m */; };
+		C7D6940020C3A0BF00C6A403 /* VideoCacheListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D693FD20C3A0BE00C6A403 /* VideoCacheListCell.m */; };
+		C7D6940120C3A0BF00C6A403 /* VideoCacheListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D693FE20C3A0BE00C6A403 /* VideoCacheListCell.xib */; };
+		C7D6940220C3A0BF00C6A403 /* VideoCacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D693FF20C3A0BF00C6A403 /* VideoCacheController.m */; };
 		C7E1D8F620B7A55200384FE5 /* ZDMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D8F520B7A55200384FE5 /* ZDMoviePlayerController.m */; };
 		C7E1D92520B7CC4600384FE5 /* YGVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D91820B7CC4600384FE5 /* YGVideoTool.m */; };
 		C7E1D92620B7CC4600384FE5 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D91920B7CC4600384FE5 /* NSString+Time.m */; };
@@ -118,6 +127,23 @@
 		C7569D0520BD41230013F9C8 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		C7569D0620BD41230013F9C8 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		C7569D0820BD48190013F9C8 /* football.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = football.entitlements; sourceTree = "<group>"; };
+		C7A977C920C29ABC00AA0C53 /* CourseCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseCollectionVC.h; sourceTree = "<group>"; };
+		C7A977CA20C29ABC00AA0C53 /* CourseCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseCollectionVC.m; sourceTree = "<group>"; };
+		C7D693E820C39F7700C6A403 /* YCDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCDownloadManager.m; sourceTree = "<group>"; };
+		C7D693E920C39F7700C6A403 /* YCDownloadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCDownloadItem.h; sourceTree = "<group>"; };
+		C7D693EA20C39F7700C6A403 /* NSURLSession+CorrectedResumeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+CorrectedResumeData.h"; sourceTree = "<group>"; };
+		C7D693EB20C39F7700C6A403 /* YCDownloadSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCDownloadSession.h; sourceTree = "<group>"; };
+		C7D693EC20C39F7700C6A403 /* YCDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCDownloadTask.h; sourceTree = "<group>"; };
+		C7D693ED20C39F7700C6A403 /* YCDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCDownloadManager.h; sourceTree = "<group>"; };
+		C7D693EE20C39F7700C6A403 /* YCDownloadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCDownloadItem.m; sourceTree = "<group>"; };
+		C7D693EF20C39F7700C6A403 /* YCDownloadSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCDownloadSession.m; sourceTree = "<group>"; };
+		C7D693F020C39F7700C6A403 /* NSURLSession+CorrectedResumeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+CorrectedResumeData.m"; sourceTree = "<group>"; };
+		C7D693F120C39F7700C6A403 /* YCDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCDownloadTask.m; sourceTree = "<group>"; };
+		C7D693FB20C3A0BD00C6A403 /* VideoCacheListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCacheListCell.h; sourceTree = "<group>"; };
+		C7D693FC20C3A0BD00C6A403 /* VideoCacheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCacheController.h; sourceTree = "<group>"; };
+		C7D693FD20C3A0BE00C6A403 /* VideoCacheListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCacheListCell.m; sourceTree = "<group>"; };
+		C7D693FE20C3A0BE00C6A403 /* VideoCacheListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCacheListCell.xib; sourceTree = "<group>"; };
+		C7D693FF20C3A0BF00C6A403 /* VideoCacheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCacheController.m; sourceTree = "<group>"; };
 		C7E1D8F420B7A55200384FE5 /* ZDMoviePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMoviePlayerController.h; sourceTree = "<group>"; };
 		C7E1D8F520B7A55200384FE5 /* ZDMoviePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDMoviePlayerController.m; sourceTree = "<group>"; };
 		C7E1D91620B7CC4600384FE5 /* YGVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGVideoTool.h; sourceTree = "<group>"; };
@@ -282,6 +308,8 @@
 			children = (
 				C731CFC120AC0D5A00F07E9E /* CourseTableVC.h */,
 				C731CFC220AC0D5A00F07E9E /* CourseTableVC.m */,
+				C7A977C920C29ABC00AA0C53 /* CourseCollectionVC.h */,
+				C7A977CA20C29ABC00AA0C53 /* CourseCollectionVC.m */,
 				C731CFC820AC1F7100F07E9E /* CourseSectionTableVC.h */,
 				C731CFC920AC1F7100F07E9E /* CourseSectionTableVC.m */,
 				C731CFC520AC195200F07E9E /* CourseModel.h */,
@@ -312,9 +340,40 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		C7D693E720C39F7700C6A403 /* YCDownloadSession */ = {
+			isa = PBXGroup;
+			children = (
+				C7D693ED20C39F7700C6A403 /* YCDownloadManager.h */,
+				C7D693E820C39F7700C6A403 /* YCDownloadManager.m */,
+				C7D693EA20C39F7700C6A403 /* NSURLSession+CorrectedResumeData.h */,
+				C7D693F020C39F7700C6A403 /* NSURLSession+CorrectedResumeData.m */,
+				C7D693EB20C39F7700C6A403 /* YCDownloadSession.h */,
+				C7D693EF20C39F7700C6A403 /* YCDownloadSession.m */,
+				C7D693EC20C39F7700C6A403 /* YCDownloadTask.h */,
+				C7D693F120C39F7700C6A403 /* YCDownloadTask.m */,
+				C7D693E920C39F7700C6A403 /* YCDownloadItem.h */,
+				C7D693EE20C39F7700C6A403 /* YCDownloadItem.m */,
+			);
+			path = YCDownloadSession;
+			sourceTree = "<group>";
+		};
+		C7D693FA20C3A0A200C6A403 /* VideoCache */ = {
+			isa = PBXGroup;
+			children = (
+				C7D693FC20C3A0BD00C6A403 /* VideoCacheController.h */,
+				C7D693FF20C3A0BF00C6A403 /* VideoCacheController.m */,
+				C7D693FB20C3A0BD00C6A403 /* VideoCacheListCell.h */,
+				C7D693FD20C3A0BE00C6A403 /* VideoCacheListCell.m */,
+				C7D693FE20C3A0BE00C6A403 /* VideoCacheListCell.xib */,
+			);
+			path = VideoCache;
+			sourceTree = "<group>";
+		};
 		C7E1D8F320B7A53B00384FE5 /* MoviePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				C7D693FA20C3A0A200C6A403 /* VideoCache */,
+				C7D693E720C39F7700C6A403 /* YCDownloadSession */,
 				C7E1D91420B7CC1600384FE5 /* Video */,
 				C73467EB20B8475C00CEFDCB /* model */,
 				C7E1D8F420B7A55200384FE5 /* ZDMoviePlayerController.h */,
@@ -520,6 +579,7 @@
 				C7E1D94020B7EFA200384FE5 /* Login.storyboard in Resources */,
 				C7E1D92820B7CC4600384FE5 /* YGPlayerView.xib in Resources */,
 				C731CF9920AC092B00F07E9E /* Assets.xcassets in Resources */,
+				C7D6940120C3A0BF00C6A403 /* VideoCacheListCell.xib in Resources */,
 				C731CF9720AC092900F07E9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,8 +648,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D693F220C39F7700C6A403 /* YCDownloadManager.m in Sources */,
 				C731CFCA20AC1F7100F07E9E /* CourseSectionTableVC.m in Sources */,
 				C731CFC320AC0D5A00F07E9E /* CourseTableVC.m in Sources */,
+				C7D693F420C39F7700C6A403 /* YCDownloadSession.m in Sources */,
 				C7E1D94320B7EFA200384FE5 /* RegisterTableViC.m in Sources */,
 				C731CF9420AC092900F07E9E /* ViewController.m in Sources */,
 				C7E1D92620B7CC4600384FE5 /* NSString+Time.m in Sources */,
@@ -601,9 +663,13 @@
 				C7E1D93F20B7EFA200384FE5 /* LoginTableVC.m in Sources */,
 				C7E1D92920B7CC4600384FE5 /* YGBrightnessAndVolumeView.m in Sources */,
 				C73467F120B8480E00CEFDCB /* UserModel.m in Sources */,
+				C7D693F320C39F7700C6A403 /* YCDownloadItem.m in Sources */,
+				C7A977CB20C29ABC00AA0C53 /* CourseCollectionVC.m in Sources */,
 				C7569D0720BD41230013F9C8 /* BaseViewController.m in Sources */,
+				C7D693F520C39F7700C6A403 /* NSURLSession+CorrectedResumeData.m in Sources */,
 				C7E1D94220B7EFA200384FE5 /* FindPasswordTableViC.m in Sources */,
 				C731CF9F20AC092B00F07E9E /* main.m in Sources */,
+				C7D693F620C39F7700C6A403 /* YCDownloadTask.m in Sources */,
 				C731CFD120AC344A00F07E9E /* RepositoryModel.m in Sources */,
 				C731CFCE20AC337300F07E9E /* RepositoryTableVC.m in Sources */,
 				C7E1D94C20B8021600384FE5 /* MineTableViewController.m in Sources */,
@@ -611,7 +677,9 @@
 				C71D6C3E20BBD29E00CD13A9 /* UITextView+WZB.m in Sources */,
 				C7E1D8F620B7A55200384FE5 /* ZDMoviePlayerController.m in Sources */,
 				C71D6C4120BBDB4700CD13A9 /* SelectLocationTableVC.m in Sources */,
+				C7D6940220C3A0BF00C6A403 /* VideoCacheController.m in Sources */,
 				C71D6C4420BBFBFE00CD13A9 /* InvitationModel.m in Sources */,
+				C7D6940020C3A0BF00C6A403 /* VideoCacheListCell.m in Sources */,
 				C7E1D92720B7CC4600384FE5 /* YGPlayerView.m in Sources */,
 				C7E1D93120B7EBCC00384FE5 /* WebViewController.m in Sources */,
 				C7E1D93E20B7EFA200384FE5 /* SelectDateVC.m in Sources */,
