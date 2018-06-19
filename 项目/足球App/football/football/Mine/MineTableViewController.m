@@ -12,7 +12,7 @@
 #import "LoginTableVC.h"
 #import "UIImageView+WebCache.h"
 #import "UserMessageTableVC.h"
-#import "VideoCacheController.h"
+//#import "VideoCacheController.h"
 
 @interface MineTableViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
@@ -74,11 +74,11 @@
         }else{
             [self logOut];
         }
-    }else if (indexPath.section == 2){
+    }/*else if (indexPath.section == 2){
         VideoCacheController *vc = [[VideoCacheController alloc] init];
         [self.navigationController pushViewController:vc animated:true];
-    }
-    else if (indexPath.section == 3){
+    }*/
+    else if (indexPath.section == 2){
         [self logOut];
     }
 }

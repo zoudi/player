@@ -14,7 +14,7 @@
 #import "YGPlayInfo.h"
 #import "MJRefresh.h"
 #import "YCDownloadManager.h"
-#import "VideoCacheController.h"
+//#import "VideoCacheController.h"
 
 @interface CourseSectionTableVC ()<VideoListInfoCellDelegate>
 @property (nonatomic, strong)NSMutableArray *dataArray;
@@ -153,10 +153,10 @@
 
 - (void)videoListCell:(CourseSectionCell *)cell downloadVideo:(CourseModel *)model {
 //http://vodtest.lexue.com/video/71130874170909.mp4    资源问题不显示下载进度
-    [YCDownloadManager startDownloadWithUrl:model.url fileName:model.title thumbImageUrl:model.cover];
+   /* [YCDownloadManager startDownloadWithUrl:model.url fileName:model.title thumbImageUrl:model.cover];
     
     VideoCacheController *vc = [[VideoCacheController alloc] init];
-    [self.navigationController pushViewController:vc animated:true];
+    [self.navigationController pushViewController:vc animated:true];*/
 }
 
 

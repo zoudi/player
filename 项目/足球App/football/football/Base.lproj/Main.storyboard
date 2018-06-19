@@ -179,47 +179,24 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlQ-eU-GrE">
-                                            <rect key="frame" x="169.5" y="21.5" width="195.5" height="18"/>
+                                            <rect key="frame" x="169.5" y="41.5" width="195.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYp-Lz-gTE">
-                                            <rect key="frame" x="309" y="65" width="56" height="29"/>
-                                            <color key="backgroundColor" red="0.95294117649999999" green="0.4941176471" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="56" id="Unl-xW-xZ9"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <state key="normal" title="下载">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="4"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="downloadBtnClick:" destination="Ieg-lY-fAT" eventType="touchUpInside" id="7YA-Kg-C2E"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="hlQ-eU-GrE" secondAttribute="trailing" constant="10" id="4k8-Ba-fTu"/>
                                         <constraint firstItem="hlQ-eU-GrE" firstAttribute="leading" secondItem="d7c-b0-c0n" secondAttribute="trailing" constant="10" id="6or-3Y-F2p"/>
-                                        <constraint firstAttribute="trailing" secondItem="gYp-Lz-gTE" secondAttribute="trailing" constant="10" id="CVM-49-VPU"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="d7c-b0-c0n" secondAttribute="bottom" constant="7" id="UFS-Ue-6co"/>
                                         <constraint firstItem="d7c-b0-c0n" firstAttribute="top" secondItem="ba4-aY-FVQ" secondAttribute="top" constant="7" id="bIS-05-1tB"/>
-                                        <constraint firstItem="gYp-Lz-gTE" firstAttribute="bottom" secondItem="d7c-b0-c0n" secondAttribute="bottom" id="iys-ku-LQt"/>
                                         <constraint firstItem="d7c-b0-c0n" firstAttribute="leading" secondItem="ba4-aY-FVQ" secondAttribute="leading" constant="15" id="vor-BR-FfG"/>
-                                        <constraint firstItem="hlQ-eU-GrE" firstAttribute="centerY" secondItem="d7c-b0-c0n" secondAttribute="centerY" constant="-20" id="wrS-Lq-1K9"/>
+                                        <constraint firstItem="hlQ-eU-GrE" firstAttribute="centerY" secondItem="d7c-b0-c0n" secondAttribute="centerY" id="wrS-Lq-1K9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="couresImage" destination="d7c-b0-c0n" id="tyZ-0A-nqd"/>
                                     <outlet property="couresName" destination="hlQ-eU-GrE" id="JLr-nz-Sws"/>
-                                    <outlet property="downloadBtn" destination="gYp-Lz-gTE" id="p2v-4B-eNa"/>
                                     <segue destination="1nK-tn-ukL" kind="push" identifier="pushVideo" id="jBp-g1-SGV"/>
                                 </connections>
                             </tableViewCell>
@@ -1026,34 +1003,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="g9n-nC-Kzf">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="yfr-TA-iYt">
-                                        <rect key="frame" x="0.0" y="173" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yfr-TA-iYt" id="2iA-1Z-MG9">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本地下载" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNE-iY-0Tu">
-                                                    <rect key="frame" x="15" y="11" width="69.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rNE-iY-0Tu" firstAttribute="centerY" secondItem="2iA-1Z-MG9" secondAttribute="centerY" id="Wd0-Pk-md9"/>
-                                                <constraint firstItem="rNE-iY-0Tu" firstAttribute="leading" secondItem="2iA-1Z-MG9" secondAttribute="leading" constant="15" id="zDV-kd-IId"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection id="8Fd-Md-GFP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4q2-ys-smq">
-                                        <rect key="frame" x="0.0" y="236" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="173" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4q2-ys-smq" id="kzL-ab-YRA">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
