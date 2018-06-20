@@ -74,7 +74,7 @@
                 AVGeoPoint *point = [AVGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
                 [invitation setObject:point forKey:@"location"];
             }else{
-                [invitation setObject:@"太阳系 火星" forKey:@"locationName"];
+                [invitation setObject:@"未知" forKey:@"locationName"];
                 
             }
             
